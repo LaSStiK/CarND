@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./Pictures/ds.png "Visualization"
+[image1]: ./Pictures/Ds.png 
 [image2]: ./Test_Signes/1.jpg 
 [image3]: ./Test_Signes/2.jpg 
 [image4]: ./Test_Signes/3.jpg 
@@ -51,7 +51,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing amount of training examples for each traffic sign
 
-![alt text][image1]
+[image1]
 
 ### Design and Test a Model Architecture
 
@@ -118,8 +118,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image2] ![alt text][image3] ![alt text][image4] 
-![alt text][image5] ![alt text][image6]
+[image2] [image3] [image4] 
+[image5][image6]
 
 2 of this pictures was hard to classify because there is few examples in test set. To avoid this we should train our model on more data.
 
