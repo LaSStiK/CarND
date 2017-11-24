@@ -16,7 +16,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
+[image1]: ./Pictures/ds.png "Visualization"
+[image2]: ./Test_Signes/1.jpg 
+[image3]: ./Test_Signes/2.jpg 
+[image4]: ./Test_Signes/3.jpg 
+[image5]: ./Test_Signes/4.jpg 
+[image6]: ./Test_Signes/5.jpg 
 
 
 ## Rubric Points
@@ -113,8 +118,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image2] ![alt text][image3] ![alt text][image4] 
+![alt text][image5] ![alt text][image6]
 
 2 of this pictures was hard to classify because there is few examples in test set. To avoid this we should train our model on more data.
 
