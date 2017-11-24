@@ -32,8 +32,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
-
+You're reading it! 
 ### Data Set Summary & Exploration
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
@@ -51,7 +50,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing amount of training examples for each traffic sign
 
-[image1]
+![image1]
 
 ### Design and Test a Model Architecture
 
@@ -118,8 +117,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-[image2] [image3] [image4] 
-[image5][image6]
+![image2] ![image3] ![image4] 
+![image5]![image6]
 
 2 of this pictures was hard to classify because there is few examples in test set. To avoid this we should train our model on more data.
 
