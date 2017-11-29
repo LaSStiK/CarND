@@ -58,9 +58,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 I try some different technics for data preprocessing, but only 2 show better accuracy of model. 
 
-So I turn color pictures to gray. Simply by multiplying red green and blue channels by coeeficients 0.299, 0.587, 0.114 respectively. 
+So I turn color pictures to gray. Simply by multiplying red green and blue channels by coeeficients 0.299, 0.587, 0.114 respectively. Benefits from this method is reducing number of input patameters from 32x32x3 to 32x32. After this operation accuracy gone better.
 
-And used sklearn.preprocessing.normalize function to move dataset mean to zero. This funxtion worked little bit better than (x-125)/125.
+And used sklearn.preprocessing.normalize function to move dataset mean to zero. This funxtion worked little bit better than (x-125)/125. This step will help optimiser to do it's job. I've check this by comparing accuracy of model before and after.
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
@@ -88,6 +88,7 @@ My final model consisted of the following layers: I get LeNet model as base and 
 
 To train the model, I used an following paramerers:
 EPOCHS = 50
+optimiser  = AdamOptimizer
 learn rate = 0.001
 keep_prob_value = 0.5
 
@@ -120,7 +121,7 @@ Here are five German traffic signs that I found on the web:
 ![image2] ![image3] ![image4] 
 ![image5]![image6]
 
-2 of this pictures was hard to classify because there is few examples in test set. To avoid this we should train our model on more data.
+2 of this pictures was hard to classify because there is few examples in test set. To avoid this we should train our model on more data. All this images has high resolution, they was resised to 32x32 using  skimage.transform.resize function. Signs after resizing has good contrast and little blurriness. So I think the reason of misclassifying 100 speed Turn right ahead  and limit was low volume of train set for this.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -135,7 +136,7 @@ Here are the results of the prediction:
 | Priority road         | Priority road  							    |
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. 
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%.  Accuracy 0.6 is bellow of test accuracy 0.942 so model has issues and need to improve.
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 15th cell of the Ipython notebook.
